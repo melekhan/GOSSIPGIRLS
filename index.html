@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOSSIP GIRL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8fb;
+    }
+
+    header {
+      background-color: #ff66b2;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-item img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    /* Her görsel için özel ayar */
+    .img-2 { object-position: top center; }
+    .img-5 { object-position: center center; }
+    .img-9 { object-position: bottom center; }
+    .img-6 { object-position: center center; }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .badge-section {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      text-align: right;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GOSSIP GIRL</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Events</a>
+    </nav>
+  </header>
+
+  <!-- Badge Headings -->
+  <div class="badge-section">
+    <h1><span class="badge bg-danger">Gossip Girls News</span></h1>
+    <h2><span class="badge text-white" style="background-color:#ff66b2;">Gossip Girls News</span></h2>
+    <h3><span class="badge bg-primary">Gossip Girls News</span></h3>
+    <h4><span class="badge bg-success">Gossip Girls News</span></h4>
+    <h5><span class="badge bg-warning text-dark">Gossip Girls News</span></h5>
+    <h6><span class="badge bg-info text-dark">Gossip Girls News</span></h6>
+  </div>
+
+  <!-- Carousel Slideshow -->
+  <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/2.jpg" class="d-block w-100 img-2" alt="Group on stairs">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Gossip Starts Here</h5>
+          <p>Spotted:🎀 The Stairs Aren’t Just for Sitting
+            Some call it the school entrance…
+            We call it the throne.
+            
+            Every queen needs her court, and Blair’s girls rule these steps like it’s their runway.
+            Pink lattes in hand, whispers louder than screams, and one simple rule:
+            you don’t sit unless you’re invited.
+            
+            From fashion statements to silent shade, the stairs have seen it all —
+            friendships, betrayals, and maybe even a stolen kiss or two. 💋
+            
+            So next time you pass by, don’t forget:
+            These steps aren’t just stone…
+            they’re sacred.
+            
+            xoxo, Gossip Gir</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/blair.jpg" class="d-block w-100 img-5" alt="👑 Queen Blair’s Reign Never Ends">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Moments of Magic</h5>
+          <p>They say every campus has a queen — but at Piri Reis University, there’s only one true ruler of style, sass, and secrets: Blair Waldorf.
+            Her headbands are sharper than her comebacks, her parties are legendary, and her standards? Untouchable. 💅
+            
+            If you’re not on the list, darling, you’re not even close to the spotlight.
+            This isn’t just a university — it’s a runway. And Blair?
+            She owns it.
+            
+            So dress to impress, keep your heels high, and your secrets even higher...
+            Because in this world, you’re either Blair, or you’re invisible.
+            
+            xoxo, Gossip Girl 💋
+            
+            </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sere.jpg" class="d-block w-100 img-9" alt="Serena is back!!">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Serena is back </h5>
+          <p>Guess Who's Back?
+            After months away from the flashing cameras, glittering rooftops, and whispered scandals...
+            Serena van der Woodsen has finally returned to the city that never stops talking.
+            
+            With her iconic golden locks, effortless charm, and a past no one dares to forget — Serena doesn’t just walk into a room,
+            she owns it.
+            
+            Old friendships will be tested, new flames will rise, and secrets?
+            Well, let’s just say Manhattan’s golden girl never comes back empty-handed.
+            
+            Welcome back, S.
+            We missed the drama.
+            
+            xoxo, Gossip Girl</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/6.jpg" class="d-block w-100 img-6" alt="Empire Hotel">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>The Empire Never Sleeps</h5>
+          <p>All Roads Lead to The Empire
+            Looking for trouble, secrets, or a little midnight mischief?
+            Then there’s only one place to be: The Empire Hotel.
+            
+            From rooftop rendezvous to power plays in the penthouse, this isn’t just a hotel —
+            it’s Chuck Bass’s kingdom.
+            
+            Deals are made, hearts are broken, and the view?
+            Just as dangerous as the people who stay there.
+            
+            So dress like you're being watched — because at The Empire,
+            someone always is.
+            
+            xoxo, Gossip Girl 💋
+            
+            </p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Introduction Card -->
+  <div class="container mt-5">
+    <div class="card text-center shadow">
+      <div class="card-body">
+        <h4 class="card-title text-danger">Welcome to Gossip Girls</h4>
+        <p class="card-text">
+          Your ultimate source for everything fabulous on campus. From fashion to drama, from events to unexpected moments — we deliver it all with a sprinkle of pink and a splash of mystery. Stay tuned, stay stylish — xoxo!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

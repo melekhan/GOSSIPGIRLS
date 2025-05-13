@@ -1,0 +1,150 @@
+/* Genel sayfa düzeni */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8fb;
+  color: #333;
+}
+
+header {
+  background-color: #ff66b2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* 🎯 About Sayfası Arka Planı */
+.about-bg {
+  background-image: url('images/7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 3rem;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* Slideshow */
+#slideshow {
+  max-width: 100%;
+  text-align: center;
+}
+
+.slide {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 🎞️ Carousel Genel Ayar */
+.carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 🎯 Her Slayt Görseli İçin Özel Ayar */
+.carousel-item img.img-2 {
+  object-position: top center; /* Merdiven sahnesi */
+}
+
+.carousel-item img.img-5 {
+  object-position: center center; /* Pembe elbiseli teklif */
+}
+
+.carousel-item img.img-9 {
+  object-position: bottom center; /* Alışveriş sahnesi */
+}
+
+.carousel-item img.img-6 {
+  object-position: center center; /* Empire Hotel */
+}
+
+/* Etkinlik kartları */
+.event {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.event img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.event h3 {
+  margin-top: 1rem;
+  color: #cc0066;
+}
+
+/* Butonlar */
+.rsvp-btn,
+.comment-btn,
+button[type="submit"] {
+  background-color: #cc0066;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rsvp-btn:hover,
+.comment-btn:hover,
+button[type="submit"]:hover {
+  background-color: #b30059;
+}
+
+/* Yorumlar */
+.comment-input {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comments {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.comments p {
+  background-color: #f2f2f2;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* Hata mesajları */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+

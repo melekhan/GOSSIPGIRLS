@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gossip Girl</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff6fa;
+    }
+    header {
+      background-color: #ff66b2;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    button {
+      background-color: #d10068;
+      border: none;
+    }
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gossip Girl</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Suggest Event</a>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <form id="eventForm" class="w-25">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" class="form-control mb-2" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" class="form-control mb-2" required>
+
+      <label for="event">Event Suggestion:</label>
+      <textarea id="event" name="event" class="form-control mb-3" rows="3" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Events Section -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5">
+      
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/8.png" class="card-img-top" alt="Film Night" data-bs-toggle="modal" data-bs-target="#modal1">
+          <div class="card-body">
+            <h5 class="card-title">Film Night</h5>
+            <p class="card-text">Experience Cinema Like Never Before! Join us on April 8th at Piri Reis University for a cozy and unforgettable Film Night under the stars. From timeless classics to thrilling new releases, this is your chance to escape reality and dive into the magic of the big screen — right on campus. 🎟️ Tickets are only $20 and include popcorn and great company! 📍 Visit the Cinema Club for more info!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/gossip2.jpg" class="card-img-top" alt="DJ Party" data-bs-toggle="modal" data-bs-target="#modal2">
+          <div class="card-body">
+            <h5 class="card-title">Party with DJ Gossip Girls</h5>
+            <p class="card-text">Get ready to dance all night! Join us at Piri Reis University on May 30, 2025, at 8:00 PM for the most glamorous night of the year. ✨ Put on your sparkliest outfit and let the music take over as DJ Gossip Girls spins the hottest tracks all night long. With dazzling lights, surprise performances, and an electric atmosphere, this party is where unforgettable memories are made. 📍 Main quad — it's going to be legendary!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/gossip3.jpg" class="card-img-top" alt="New York Trip" data-bs-toggle="modal" data-bs-target="#modal3">
+          <div class="card-body">
+            <h5 class="card-title">Travel To New York</h5>
+            <p class="card-text">Your dream New York adventure is just around the corner! 🗽 Walk the streets of Manhattan, snap selfies at Times Square, and explore Central Park — all for just $100! This trip is exclusive for Piri Reis University students. Limited tickets available at the beach stand. XOXO, Gossip Girls 💋</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/4.jpg" class="card-img-top" alt="Spring Festival" data-bs-toggle="modal" data-bs-target="#modal4">
+          <div class="card-body">
+            <h5 class="card-title">Spring Festival</h5>
+            <p class="card-text">🌸 Welcome the new season with joy! Music, food, games, and friends all day long. Join the Spring Festival and celebrate life at Piri Reis University with open air performances, delicious snacks, and unforgettable campus vibes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Comment Section -->
+<section class="mt-5">
+  <h3>Leave a Comment 💬</h3>
+  <textarea id="commentInput" class="form-control mb-2" rows="3" placeholder="Write your comment here..."></textarea>
+  <button onclick="addComment()" class="btn btn-dark">Submit Comment</button>
+
+  <div id="commentsSection" class="mt-4">
+    <h5>Comments:</h5>
+    <ul id="commentList" class="list-group"></ul>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Modals for Enlarged Images -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"><img src="images/8.png" class="modal-img" alt="Film Night"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"><img src="images/gossip2.jpg" class="modal-img" alt="DJ Party"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"><img src="images/gossip3.jpg" class="modal-img" alt="New York Trip"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"><img src="images/4.jpg" class="modal-img" alt="Spring Festival"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (necessary for modals) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Yorumları localStorage'dan yükle
+    window.onload = function () {
+      const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+      const commentList = document.getElementById('commentList');
+      storedComments.forEach(comment => {
+        const newComment = document.createElement('li');
+        newComment.className = 'list-group-item';
+        newComment.textContent = comment;
+        commentList.appendChild(newComment);
+      });
+    };
+  
+    function addComment() {
+      const input = document.getElementById('commentInput');
+      const commentText = input.value.trim();
+  
+      if (commentText !== "") {
+        const commentList = document.getElementById('commentList');
+        const newComment = document.createElement('li');
+        newComment.className = 'list-group-item';
+        newComment.textContent = commentText;
+        commentList.appendChild(newComment);
+        input.value = "";
+  
+        // localStorage'a ekle
+        let storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+        storedComments.push(commentText);
+        localStorage.setItem("comments", JSON.stringify(storedComments));
+      } else {
+        alert("Please write a comment before submitting!");
+      }
+    }
+  </script>
+  
+  
+</body>
+</html>
